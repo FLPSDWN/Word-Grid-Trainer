@@ -11,33 +11,16 @@
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overscroll-behavior:none}
 body{padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
-button,select{font:inherit}
-.app{max-width:720px;margin:auto;padding:14px}
-.top{display:flex;justify-content:space-between;align-items:end;gap:12px}
-.brand{font-size:24px;font-weight:800}.sub,.muted{color:var(--muted);font-size:13px;line-height:1.45}
-.label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-.timer{font-size:30px;font-weight:800;text-align:right;font-variant-numeric:tabular-nums}
-.settings{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
-.box,.panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:10px}
-.box select{width:100%;margin-top:4px;background:transparent;color:var(--text);border:0;font-weight:700;font-size:16px}
-.box option{color:#111}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px}
-.stat{text-align:center;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:9px}
-.val{font-size:20px;font-weight:800}
-#current{min-height:34px;text-align:center;font-size:24px;font-weight:800;letter-spacing:.05em;margin:6px 0}
-.boardWrap{position:relative;max-width:600px;margin:auto;touch-action:none;user-select:none;-webkit-user-select:none;overscroll-behavior:contain}
-.board{display:grid;position:relative;z-index:2}
-.tile{aspect-ratio:1;border:2px solid var(--border);border-radius:15px;background:linear-gradient(#2e3a59,var(--tile));display:flex;align-items:center;justify-content:center;font-weight:800;position:relative;touch-action:none}
-.tile.sel{background:var(--accent);border-color:var(--accent2);transform:scale(.97)}
-.step{position:absolute;top:4px;right:6px;font-size:10px;opacity:.8}
-.path{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none}.path polyline{fill:none;stroke:var(--accent2);stroke-width:8;stroke-linecap:round;stroke-linejoin:round;opacity:.78}
-#msg{min-height:48px;padding:10px 2px 2px;color:var(--muted);font-size:14px;line-height:1.4}
-#msg.good{color:var(--good)}#msg.bad{color:var(--bad)}#msg.warn{color:var(--warn)}
-.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.btn{min-height:46px;border-radius:13px;border:1px solid var(--border);background:var(--panel);color:var(--text);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent)}.btn:disabled{opacity:.5}
-.panel{margin-top:12px}.panelHead{display:flex;justify-content:space-between;gap:8px;align-items:center}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.chip{padding:6px 9px;border-radius:999px;background:#202a44;font-size:13px}.chip.good{background:#103f38}.chip.target{background:#29244d;border:1px solid var(--accent2)}
+button,select{font:inherit}.app{max-width:720px;margin:auto;padding:14px}.top{display:flex;justify-content:space-between;align-items:end;gap:12px}.brand{font-size:24px;font-weight:800}.sub,.muted{color:var(--muted);font-size:13px;line-height:1.45}.label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.timer{font-size:30px;font-weight:800;text-align:right;font-variant-numeric:tabular-nums}
+.settings{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.box,.panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:10px}.box select{width:100%;margin-top:4px;background:transparent;color:var(--text);border:0;font-weight:700;font-size:16px}.box option{color:#111}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px}.stat{text-align:center;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:9px}.val{font-size:20px;font-weight:800}#current{min-height:34px;text-align:center;font-size:24px;font-weight:800;letter-spacing:.05em;margin:6px 0}
+.boardWrap{position:relative;max-width:600px;margin:auto;touch-action:none;user-select:none;-webkit-user-select:none;overscroll-behavior:contain}.board{display:grid;position:relative;z-index:2}.tile{aspect-ratio:1;border:2px solid var(--border);border-radius:15px;background:linear-gradient(#2e3a59,var(--tile));display:flex;align-items:center;justify-content:center;font-weight:800;position:relative;touch-action:none;transition:transform .08s ease,background .08s ease,border-color .08s ease}.tile.sel{background:var(--accent);border-color:var(--accent2);transform:scale(.97)}.tile.demo{background:#5d54c7;border-color:#bbb5ff;transform:scale(.95)}.step{position:absolute;top:4px;right:6px;font-size:10px;opacity:.8}.path{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none}.path polyline{fill:none;stroke:var(--accent2);stroke-width:8;stroke-linecap:round;stroke-linejoin:round;opacity:.78}
+#msg{min-height:48px;padding:10px 2px 2px;color:var(--muted);font-size:14px;line-height:1.4}#msg.good{color:var(--good)}#msg.bad{color:var(--bad)}#msg.warn{color:var(--warn)}
+.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.btn{min-height:46px;border-radius:13px;border:1px solid var(--border);background:var(--panel);color:var(--text);font-weight:700;padding:8px}.btn.primary{background:var(--accent);border-color:var(--accent)}.btn:disabled{opacity:.5}.btn.smallBtn{min-height:34px;padding:6px 9px;font-size:13px}.btn.ghost{background:#202a44}
+.panel{margin-top:12px}.panelHead{display:flex;justify-content:space-between;gap:8px;align-items:center}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.chip{padding:6px 9px;border-radius:999px;background:#202a44;font-size:13px}.chip.good{background:#103f38}.chip.target{background:#29244d;border:1px solid var(--accent2)}button.chip{color:var(--text);border:0;min-height:34px}.targetList{display:grid;gap:8px;margin-top:10px}.targetRow{background:#20263d;border:1px solid var(--border);border-radius:12px;padding:9px}.targetTop{display:flex;align-items:center;justify-content:space-between;gap:8px}.targetMeta{font-weight:700}.hintText{margin-top:6px;color:var(--muted);font-size:13px;line-height:1.35}
+.extension{border-color:#5d54c7;background:#1c1c39}.extension strong{color:#d7d3ff}.statsTable{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}.statsTable th,.statsTable td{padding:7px 6px;border-bottom:1px solid var(--border);text-align:right}.statsTable th:first-child,.statsTable td:first-child{text-align:left}.summaryGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.summaryCard{background:#20263d;border-radius:10px;padding:9px}.summaryCard .num{font-size:19px;font-weight:800;margin-top:2px}
 hr{border:0;border-top:1px solid var(--border);margin:14px 0}.hidden{display:none}
-@media(max-width:500px){.settings{grid-template-columns:1fr 1fr}.modeBox{grid-column:1/-1}.controls{grid-template-columns:1fr 1fr}.app{padding:12px}}
+@media(max-width:500px){.settings{grid-template-columns:1fr 1fr}.modeBox{grid-column:1/-1}.controls{grid-template-columns:1fr 1fr}.app{padding:12px}.summaryGrid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -73,16 +56,29 @@ hr{border:0;border-top:1px solid var(--border);margin:14px 0}.hidden{display:non
     <button id="review" class="btn">Review</button>
   </div>
 
+  <div id="extensionPanel" class="panel extension hidden">
+    <div class="panelHead"><strong>Extension check</strong><button id="dismissExtension" class="btn smallBtn ghost" type="button">Dismiss</button></div>
+    <div id="extensionText" class="muted" style="margin-top:6px"></div>
+  </div>
+
   <div id="training" class="panel hidden">
     <div class="panelHead"><strong>Long-word targets</strong><span id="targetCount" class="muted"></span></div>
-    <div class="muted">High-value long words on this board. Find one and it disappears.</div>
-    <div id="targets" class="chips"></div>
+    <div class="muted">The words stay hidden. Use progressive hints only when you need them.</div>
+    <div id="targets" class="targetList"></div>
   </div>
 
   <div class="panel">
     <div class="panelHead"><strong>Words found</strong><span id="round" class="muted">Dictionary loading</span></div>
     <div id="found" class="chips"></div>
-    <div id="reviewBox" class="hidden"><hr><strong>Long words you missed</strong><div id="missed" class="chips"></div></div>
+
+    <div id="reviewBox" class="hidden">
+      <hr>
+      <strong>Long words you missed</strong>
+      <div class="muted">Tap a word to animate its path on the board.</div>
+      <div id="missed" class="chips"></div>
+      <div id="roundStats" style="margin-top:14px"></div>
+    </div>
+
     <hr>
     <div class="muted"><b>Scoring:</b> 3–4 letters = 1, 5 = 2, 6 = 3, 7 = 5, 8+ = 11. Diagonals are allowed; tiles cannot be reused. <b>Qu</b> is one tile and contributes “QU”.</div>
   </div>
@@ -90,133 +86,55 @@ hr{border:0;border-top:1px solid var(--border);margin:14px 0}.hidden{display:non
 
 <script>
 (()=>{
-const URLS=[
-'https://cdn.jsdelivr.net/gh/dolph/dictionary@master/enable1.txt',
-'https://raw.githubusercontent.com/dolph/dictionary/master/enable1.txt'
-];
+const URLS=['https://cdn.jsdelivr.net/gh/dolph/dictionary@master/enable1.txt','https://raw.githubusercontent.com/dolph/dictionary/master/enable1.txt'];
 const BAG='EEEEEEEEEEEEAAAAAAAAAIIIIIIIIIOOOOOOOONNNNNNRRRRRRTTTTTTLLLLSSSSUUUUDDDDGGGBBCCMMPPFFHHVVWWYYKJXQZ';
 const SEEDS=['airline','airport','planet','stream','market','garden','travel','bridge','silver','winter','summer','orange','camera','forest','animal','marine','rapid','linear','trainer','letter','friend','flight','signal','system','motion','energy','nature','station','random','puzzle','search','player','cloud','screen','rocket','engine','river','mountain','desert','valley','circle','square','little','bright','strong','simple','memory','future','wonder','active','detail','mobile','coffee','silent','yellow'];
-
 const $=id=>document.getElementById(id);
-const boardEl=$('board'),wrap=$('boardWrap'),line=$('line'),msg=$('msg');
-const sizeEl=$('size'),limitEl=$('limit'),modeEl=$('mode'),start=$('start');
-let words=[],dict=null,solutions=new Set(),board=[],n=4,seeds=[],targets=[];
-let found=new Set(),path=[],active=false,dragging=false,pid=null,timer=null,seconds=120,infinite=false,roundNo=0;
+const boardEl=$('board'),wrap=$('boardWrap'),line=$('line'),msg=$('msg'),sizeEl=$('size'),limitEl=$('limit'),modeEl=$('mode'),start=$('start');
+let words=[],dict=null,solutionPaths=new Map(),board=[],n=4,seeds=[],targets=[],targetHints=new Map();
+let found=new Set(),path=[],active=false,dragging=false,pid=null,timer=null,seconds=120,infinite=false,roundNo=0,roundStart=0,demoTimer=null,demoAnimating=false;
 
 function say(t,k=''){msg.className=k;msg.innerHTML=t}
-async function loadDict(){
-  for(const u of URLS){
-    try{
-      const r=await fetch(u,{cache:'force-cache'}); if(!r.ok)throw 0;
-      words=(await r.text()).split(/\r?\n/).map(x=>x.trim().toLowerCase()).filter(x=>/^[a-z]{3,18}$/.test(x));
-      if(words.length<100000)throw 0;
-      dict=new Set(words);start.disabled=false;start.textContent='Start / New';$('round').textContent='Dictionary ready';say('Dictionary loaded. Choose options and tap <b>Start</b>.','good');return;
-    }catch(e){}
-  }
-  say('Dictionary could not load. Reload when you have a connection.','bad');
-}
+async function loadDict(){for(const u of URLS){try{const r=await fetch(u,{cache:'force-cache'});if(!r.ok)throw 0;words=(await r.text()).split(/\r?\n/).map(x=>x.trim().toLowerCase()).filter(x=>/^[a-z]{3,18}$/.test(x));if(words.length<100000)throw 0;dict=new Set(words);start.disabled=false;start.textContent='Start / New';$('round').textContent='Dictionary ready';say('Dictionary loaded. Choose options and tap <b>Start</b>.','good');return}catch(e){}}say('Dictionary could not load. Reload when you have a connection.','bad')}
 function rc(i,s=n){return[Math.floor(i/s),i%s]}
 function adj(a,b){const[ar,ac]=rc(a),[br,bc]=rc(b);return Math.max(Math.abs(ar-br),Math.abs(ac-bc))===1}
 function neigh(i,s){const[r,c]=rc(i,s),o=[];for(let rr=Math.max(0,r-1);rr<=Math.min(s-1,r+1);rr++)for(let cc=Math.max(0,c-1);cc<=Math.min(s-1,c+1);cc++){let j=rr*s+cc;if(j!==i)o.push(j)}return o}
 function pts(len){return len<3?0:len<=4?1:len===5?2:len===6?3:len===7?5:11}
 function randLetter(){return BAG[Math.floor(Math.random()*BAG.length)]}
 function tokens(w){let a=[];for(let i=0;i<w.length;i++){if(w[i]==='q'&&w[i+1]==='u'){a.push('Qu');i++}else a.push(w[i].toUpperCase())}return a}
-function place(b,s,w){
-  const t=tokens(w); if(t.length>b.length)return false;
-  for(let a=0;a<220;a++){
-    const st=Math.floor(Math.random()*b.length); if(b[st]&&b[st]!==t[0])continue;
-    const p=[st],used=new Set([st]);
-    function rec(k){
-      if(k===t.length)return true;
-      let opts=neigh(p[p.length-1],s).filter(j=>!used.has(j)&&(!b[j]||b[j]===t[k])).sort(()=>Math.random()-.5);
-      for(const j of opts){p.push(j);used.add(j);if(rec(k+1))return true;p.pop();used.delete(j)}
-      return false;
-    }
-    if(rec(1)){p.forEach((j,k)=>b[j]=t[k]);return true}
-  }
-  return false;
-}
-function gen(s){
-  const b=Array(s*s).fill(null),ss=[],want=s===4?2:s===5?3:4;
-  for(const w of [...SEEDS].sort(()=>Math.random()-.5)){if(ss.length>=want)break;if(place(b,s,w))ss.push(w)}
-  for(let i=0;i<b.length;i++)if(!b[i]){let c=randLetter();b[i]=c==='Q'?'Qu':c}
-  return{b,ss};
-}
-function draw(){
-  boardEl.innerHTML='';boardEl.style.gridTemplateColumns=`repeat(${n},1fr)`;boardEl.style.gap=n===6?'5px':n===5?'6px':'8px';
-  for(let i=0;i<board.length;i++){const d=document.createElement('div');d.className='tile';d.dataset.i=i;d.textContent=board[i];d.style.fontSize=n===4?'clamp(30px,10vw,56px)':n===5?'clamp(24px,8vw,42px)':'clamp(20px,6.8vw,34px)';boardEl.appendChild(d)}
-  clearPath();
-}
+function place(b,s,w){const t=tokens(w);if(t.length>b.length)return false;for(let a=0;a<220;a++){const st=Math.floor(Math.random()*b.length);if(b[st]&&b[st]!==t[0])continue;const p=[st],used=new Set([st]);function rec(k){if(k===t.length)return true;let opts=neigh(p[p.length-1],s).filter(j=>!used.has(j)&&(!b[j]||b[j]===t[k])).sort(()=>Math.random()-.5);for(const j of opts){p.push(j);used.add(j);if(rec(k+1))return true;p.pop();used.delete(j)}return false}if(rec(1)){p.forEach((j,k)=>b[j]=t[k]);return true}}return false}
+function gen(s){const b=Array(s*s).fill(null),ss=[],want=s===4?2:s===5?3:4;for(const w of [...SEEDS].sort(()=>Math.random()-.5)){if(ss.length>=want)break;if(place(b,s,w))ss.push(w)}for(let i=0;i<b.length;i++)if(!b[i]){let c=randLetter();b[i]=c==='Q'?'Qu':c}return{b,ss}}
+function draw(){boardEl.innerHTML='';boardEl.style.gridTemplateColumns=`repeat(${n},1fr)`;boardEl.style.gap=n===6?'5px':n===5?'6px':'8px';for(let i=0;i<board.length;i++){const d=document.createElement('div');d.className='tile';d.dataset.i=i;d.textContent=board[i];d.style.fontSize=n===4?'clamp(30px,10vw,56px)':n===5?'clamp(24px,8vw,42px)':'clamp(20px,6.8vw,34px)';boardEl.appendChild(d)}clearPath()}
+function clearDemo(){clearTimeout(demoTimer);demoAnimating=false;[...boardEl.children].forEach(x=>x.classList.remove('demo'));if(!path.length)line.setAttribute('points','')}
 function clearPath(){path=[];$('current').textContent='';line.setAttribute('points','');[...boardEl.children].forEach(x=>{x.classList.remove('sel');x.querySelector('.step')?.remove()})}
 function word(){return path.map(i=>board[i]).join('').toLowerCase()}
-function pathUI(){
-  $('current').textContent=word().toUpperCase();
-  [...boardEl.children].forEach((x,i)=>{const k=path.indexOf(i);x.classList.toggle('sel',k>=0);x.querySelector('.step')?.remove();if(k>=0){let s=document.createElement('span');s.className='step';s.textContent=k+1;x.appendChild(s)}});
-  const wr=wrap.getBoundingClientRect();line.setAttribute('points',path.map(i=>{let r=boardEl.children[i].getBoundingClientRect();return`${r.left-wr.left+r.width/2},${r.top-wr.top+r.height/2}`}).join(' '));
-}
-function add(i){if(!active||path.includes(i)||(path.length&&!adj(path[path.length-1],i)))return;path.push(i);pathUI()}
+function drawLineFor(p){const wr=wrap.getBoundingClientRect();line.setAttribute('points',p.map(i=>{let r=boardEl.children[i].getBoundingClientRect();return`${r.left-wr.left+r.width/2},${r.top-wr.top+r.height/2}`}).join(' '))}
+function pathUI(){$('current').textContent=word().toUpperCase();[...boardEl.children].forEach((x,i)=>{const k=path.indexOf(i);x.classList.toggle('sel',k>=0);x.querySelector('.step')?.remove();if(k>=0){let s=document.createElement('span');s.className='step';s.textContent=k+1;x.appendChild(s)}});drawLineFor(path)}
+function add(i){if(!active||demoAnimating||path.includes(i)||(path.length&&!adj(path[path.length-1],i)))return;path.push(i);pathUI()}
 function tileAt(x,y){let e=document.elementFromPoint(x,y),t=e?.closest?.('.tile');return t&&boardEl.contains(t)?Number(t.dataset.i):null}
 function score(){let s=0;found.forEach(w=>s+=pts(w.length));return s}
-function foundUI(){
-  $('found').innerHTML='';[...found].sort((a,b)=>b.length-a.length||a.localeCompare(b)).forEach(w=>{let c=document.createElement('span');c.className='chip good';c.textContent=w.toUpperCase();$('found').appendChild(c)});
-  $('score').textContent=score();$('count').textContent=found.size;$('long').textContent=[...found].filter(w=>w.length>=5).length;
-}
+function foundUI(){$('found').innerHTML='';[...found].sort((a,b)=>b.length-a.length||a.localeCompare(b)).forEach(w=>{let c=document.createElement('span');c.className='chip good';c.textContent=w.toUpperCase();$('found').appendChild(c)});$('score').textContent=score();$('count').textContent=found.size;$('long').textContent=[...found].filter(w=>w.length>=5).length}
 function counts(b){let c={};for(const t of b)for(const ch of t.toLowerCase())c[ch]=(c[ch]||0)+1;return c}
 function possible(w,c){let d={};for(const ch of w){d[ch]=(d[ch]||0)+1;if(d[ch]>(c[ch]||0))return false}return true}
-function solve(b,s){
-  const c=counts(b),cand=[],max=s===6?16:15;
-  for(const w of words)if(w.length<=max&&possible(w,c))cand.push(w);
-  const cset=new Set(cand),pref=new Set();for(const w of cand)for(let i=1;i<w.length;i++)pref.add(w.slice(0,i));
-  const out=new Set(),nb=Array.from({length:b.length},(_,i)=>neigh(i,s));
-  function dfs(i,used,w){w+=b[i].toLowerCase();if(!pref.has(w)&&!cset.has(w))return;if(w.length>=3&&cset.has(w))out.add(w);if(w.length>=max)return;for(const j of nb[i])if(!used.has(j)){used.add(j);dfs(j,used,w);used.delete(j)}}
-  for(let i=0;i<b.length;i++)dfs(i,new Set([i]),'');return out;
-}
-function makeTargets(){
-  let ranked=[...solutions].filter(w=>w.length>=6).sort((a,b)=>pts(b.length)-pts(a.length)||b.length-a.length||a.localeCompare(b));
-  targets=[];for(const w of [...seeds.map(x=>x.toLowerCase()).filter(w=>solutions.has(w)&&w.length>=6),...ranked]){if(!targets.includes(w))targets.push(w);if(targets.length>=12)break}
-  if(targets.length<8)for(const w of [...solutions].filter(w=>w.length===5).sort()){if(!targets.includes(w))targets.push(w);if(targets.length>=12)break}
-  targetUI();
-}
-function targetUI(){
-  if(modeEl.value!=='training'){$('training').classList.add('hidden');return}
-  $('training').classList.remove('hidden');let rem=targets.filter(w=>!found.has(w));$('targetCount').textContent=`${rem.length} remaining`;$('targets').innerHTML='';
-  if(!rem.length){let c=document.createElement('span');c.className='chip good';c.textContent='All targets cleared';$('targets').appendChild(c);return}
-  rem.forEach(w=>{let c=document.createElement('span');c.className='chip target';c.textContent=`${w.toUpperCase()} · ${pts(w.length)}`;$('targets').appendChild(c)});
-}
-function submit(){
-  if(!path.length)return;let w=word();
-  if(w.length<3)say(`<b>${w.toUpperCase()}</b> is too short.`,'warn');
-  else if(!dict.has(w))say(`<b>${w.toUpperCase()}</b> is not in this trainer’s dictionary.`,'bad');
-  else if(found.has(w))say(`<b>${w.toUpperCase()}</b> — already found.`,'warn');
-  else{found.add(w);foundUI();targetUI();let p=pts(w.length),target=targets.includes(w);say(`<b>${w.toUpperCase()}</b> +${p} point${p===1?'':'s'}${target?' — target cleared.':w.length>=5?' — nice long word.':''}`,'good')}
-  clearPath();
-}
+function solve(b,s){const c=counts(b),cand=[],max=s===6?16:15;for(const w of words)if(w.length<=max&&possible(w,c))cand.push(w);const cset=new Set(cand),pref=new Set();for(const w of cand)for(let i=1;i<w.length;i++)pref.add(w.slice(0,i));const out=new Map(),nb=Array.from({length:b.length},(_,i)=>neigh(i,s));function dfs(i,used,w,p){w+=b[i].toLowerCase();p.push(i);if(!pref.has(w)&&!cset.has(w)){p.pop();return}if(w.length>=3&&cset.has(w)&&!out.has(w))out.set(w,[...p]);if(w.length<max)for(const j of nb[i])if(!used.has(j)){used.add(j);dfs(j,used,w,p);used.delete(j)}p.pop()}for(let i=0;i<b.length;i++)dfs(i,new Set([i]),'',[]);return out}
+function solutionWords(){return [...solutionPaths.keys()]}
+function makeTargets(){let ranked=solutionWords().filter(w=>w.length>=6).sort((a,b)=>pts(b.length)-pts(a.length)||b.length-a.length||a.localeCompare(b));targets=[];for(const w of [...seeds.map(x=>x.toLowerCase()).filter(w=>solutionPaths.has(w)&&w.length>=6),...ranked]){if(!targets.includes(w))targets.push(w);if(targets.length>=10)break}if(targets.length<7)for(const w of solutionWords().filter(w=>w.length===5).sort()){if(!targets.includes(w))targets.push(w);if(targets.length>=10)break}targetHints=new Map(targets.map(w=>[w,0]));targetUI()}
+function quadrantFor(index){const[r,c]=rc(index);const vert=r<n/2?'upper':'lower',horiz=c<n/2?'left':'right';return `${vert}-${horiz} area`}
+function hintForTarget(w,level){const p=solutionPaths.get(w)||[];if(level===0)return `${w.length} letters · ${pts(w.length)} pts`;if(level===1)return `Starts with ${w.slice(0,2).toUpperCase()}`;if(level===2)return `Starts in the ${quadrantFor(p[0])}`;if(level===3){const letters=p.slice(0,3).map(i=>board[i]).join(' → ');return `First tiles: ${letters}`;}return `Word: ${w.toUpperCase()} — tap Show path`}
+function targetUI(){if(modeEl.value!=='training'){$('training').classList.add('hidden');return}$('training').classList.remove('hidden');let rem=targets.filter(w=>!found.has(w));$('targetCount').textContent=`${rem.length} remaining`;$('targets').innerHTML='';if(!rem.length){let c=document.createElement('span');c.className='chip good';c.textContent='All targets cleared';$('targets').appendChild(c);return}rem.forEach(w=>{const level=targetHints.get(w)||0;let row=document.createElement('div');row.className='targetRow';let top=document.createElement('div');top.className='targetTop';let meta=document.createElement('div');meta.className='targetMeta';meta.textContent=hintForTarget(w,0);let btn=document.createElement('button');btn.className='btn smallBtn ghost';btn.type='button';btn.textContent=level>=4?'Show path':'Hint';btn.addEventListener('click',()=>{let l=targetHints.get(w)||0;if(l<4){l++;targetHints.set(w,l);targetUI()}else animateWord(w)});top.append(meta,btn);row.append(top);if(level>0){let h=document.createElement('div');h.className='hintText';h.textContent=hintForTarget(w,level);row.append(h)}$('targets').appendChild(row)})}
+function findExtensions(prefix,chosenPath){const results=[];for(const w of solutionWords()){if(w.length<=prefix.length||!w.startsWith(prefix))continue;const target=tokens(w);const prefixTokens=chosenPath.map(i=>board[i]);if(prefixTokens.length>=target.length)continue;let ok=true;for(let i=0;i<prefixTokens.length;i++)if(prefixTokens[i].toLowerCase()!==target[i].toLowerCase()){ok=false;break}if(!ok)continue;const used=new Set(chosenPath);function rec(pos,last){if(pos===target.length)return true;for(const j of neigh(last,n)){if(used.has(j)||board[j].toLowerCase()!==target[pos].toLowerCase())continue;used.add(j);if(rec(pos+1,j))return true;used.delete(j)}return false}if(rec(prefixTokens.length,chosenPath[chosenPath.length-1]))results.push(w)}return results.sort((a,b)=>b.length-a.length||a.localeCompare(b))}
+function showExtensionChallenge(base,extensions){if(!extensions.length){$('extensionPanel').classList.add('hidden');return}const longest=extensions[0].length;$('extensionText').innerHTML=`You found <strong>${base.toUpperCase()}</strong>, but that exact path can continue into <strong>${extensions.length}</strong> longer word${extensions.length===1?'':'s'}. The longest is <strong>${longest} letters</strong>. Before moving on, see if you can extend it.`;$('extensionPanel').classList.remove('hidden')}
+function submit(){if(!path.length)return;let w=word(),submittedPath=[...path];if(w.length<3)say(`<b>${w.toUpperCase()}</b> is too short.`,'warn');else if(!dict.has(w))say(`<b>${w.toUpperCase()}</b> is not in this trainer’s dictionary.`,'bad');else if(found.has(w))say(`<b>${w.toUpperCase()}</b> — already found.`,'warn');else{found.add(w);foundUI();targetUI();let p=pts(w.length),target=targets.includes(w);say(`<b>${w.toUpperCase()}</b> +${p} point${p===1?'':'s'}${target?' — target cleared.':w.length>=5?' — nice long word.':''}`,'good');showExtensionChallenge(w,findExtensions(w,submittedPath))}clearPath()}
 function showTime(){time.textContent=infinite?'∞':`${Math.floor(seconds/60)}:${String(seconds%60).padStart(2,'0')}`}
-function stop(){active=false;clearInterval(timer);timer=null;clearPath();say('Round over. Tap <b>Review</b> to see long words you missed.')}
-function begin(){
-  if(!dict){say('Dictionary is still loading.','warn');return}
-  clearInterval(timer);n=Number(sizeEl.value);infinite=limitEl.value==='inf';seconds=infinite?0:Number(limitEl.value);found=new Set();solutions=new Set();targets=[];$('reviewBox').classList.add('hidden');active=false;roundNo++;
-  let g=gen(n);board=g.b;seeds=g.ss;draw();foundUI();showTime();targetUI();$('round').textContent=`Round ${roundNo} · solving ${n}×${n}…`;say('Preparing this board…');
-  setTimeout(()=>{solutions=solve(board,n);makeTargets();active=true;$('round').textContent=`${modeEl.value==='training'?'Training':'Classic'} · ${n}×${n} · ${solutions.size} words`;say(modeEl.value==='training'?'Training mode: clear the long-word target list.':'Go — swipe and lift to submit.');if(!infinite)timer=setInterval(()=>{seconds--;showTime();if(seconds<=0)stop()},1000)},50);
-}
-function hint(){
-  if(!solutions.size){say('Start a round first.');return}
-  let r=modeEl.value==='training'?targets.filter(w=>!found.has(w)):[...solutions].filter(w=>w.length>=5&&!found.has(w));
-  if(!r.length){say('No unfound long words remain in the hint pool.','good');return}
-  r.sort((a,b)=>b.length-a.length);let w=r[Math.floor(Math.random()*Math.min(20,r.length))];say(`Hint: ${w.length} letters, starts with <b>${w.slice(0,2).toUpperCase()}</b>.`);
-}
-function review(){
-  if(!solutions.size){say('Start a round first.');return}
-  let m=[...solutions].filter(w=>w.length>=5&&!found.has(w)).sort((a,b)=>b.length-a.length||a.localeCompare(b));$('missed').innerHTML='';
-  m.slice(0,100).forEach(w=>{let c=document.createElement('span');c.className='chip';c.textContent=w.toUpperCase();$('missed').appendChild(c)});$('reviewBox').classList.remove('hidden');say(`Reviewing ${m.length} unfound 5+ letter word${m.length===1?'':'s'}.`);
-}
-wrap.addEventListener('pointerdown',e=>{if(!active)return;let i=tileAt(e.clientX,e.clientY);if(i===null)return;e.preventDefault();dragging=true;pid=e.pointerId;clearPath();add(i);try{wrap.setPointerCapture?.(pid)}catch(_){}});
-wrap.addEventListener('pointermove',e=>{if(!dragging||e.pointerId!==pid)return;e.preventDefault();let i=tileAt(e.clientX,e.clientY);if(i!==null)add(i)});
-function end(e){if(!dragging||e.pointerId!==pid)return;e.preventDefault();dragging=false;try{wrap.releasePointerCapture?.(pid)}catch(_){}pid=null;submit()}
-wrap.addEventListener('pointerup',end);wrap.addEventListener('pointercancel',()=>{dragging=false;pid=null;clearPath()});
-modeEl.addEventListener('change',()=>{if(modeEl.value==='training')limitEl.value='inf';targetUI();if(!active){infinite=limitEl.value==='inf';seconds=infinite?0:Number(limitEl.value);showTime()}});
-limitEl.addEventListener('change',()=>{if(!active){infinite=limitEl.value==='inf';seconds=infinite?0:Number(limitEl.value);showTime()}});
-start.addEventListener('click',begin);$('hint').addEventListener('click',hint);$('review').addEventListener('click',review);
+function stop(){active=false;clearInterval(timer);timer=null;clearPath();say('Round over. Tap <b>Review</b> to analyze what you missed.')}
+function begin(){if(!dict){say('Dictionary is still loading.','warn');return}clearInterval(timer);clearDemo();n=Number(sizeEl.value);infinite=limitEl.value==='inf';seconds=infinite?0:Number(limitEl.value);found=new Set();solutionPaths=new Map();targets=[];$('reviewBox').classList.add('hidden');$('extensionPanel').classList.add('hidden');active=false;roundNo++;roundStart=Date.now();let g=gen(n);board=g.b;seeds=g.ss;draw();foundUI();showTime();targetUI();$('round').textContent=`Round ${roundNo} · solving ${n}×${n}…`;say('Preparing this board…');setTimeout(()=>{solutionPaths=solve(board,n);makeTargets();active=true;$('round').textContent=`${modeEl.value==='training'?'Training':'Classic'} · ${n}×${n} · ${solutionPaths.size} words`;say(modeEl.value==='training'?'Training mode: work through the hidden long-word targets.':'Go — swipe and lift to submit.');if(!infinite)timer=setInterval(()=>{seconds--;showTime();if(seconds<=0)stop()},1000)},50)}
+function hint(){if(!solutionPaths.size){say('Start a round first.');return}let r=modeEl.value==='training'?targets.filter(w=>!found.has(w)):solutionWords().filter(w=>w.length>=5&&!found.has(w));if(!r.length){say('No unfound long words remain in the hint pool.','good');return}r.sort((a,b)=>b.length-a.length);let w=r[Math.floor(Math.random()*Math.min(20,r.length))];say(`Hint: ${w.length} letters, starts with <b>${w.slice(0,2).toUpperCase()}</b>.`)}
+function animateWord(w){const p=solutionPaths.get(w);if(!p?.length)return;clearPath();clearDemo();demoAnimating=true;let shown=[];let i=0;function step(){if(i<p.length){shown.push(p[i]);boardEl.children[p[i]].classList.add('demo');drawLineFor(shown);$('current').textContent=w.slice(0,Math.min(w.length,shown.map(j=>board[j]).join('').length)).toUpperCase();i++;demoTimer=setTimeout(step,220)}else{demoTimer=setTimeout(()=>{clearDemo();$('current').textContent=''},900)}}step()}
+function bucket(len){return len>=8?'8+':String(len)}
+function buildStats(){const avail={'3':0,'4':0,'5':0,'6':0,'7':0,'8+':0},got={'3':0,'4':0,'5':0,'6':0,'7':0,'8+':0};for(const w of solutionWords())avail[bucket(w.length)]++;for(const w of found)got[bucket(w.length)]++;const longest=[...found].sort((a,b)=>b.length-a.length)[0]||'—';const elapsed=Math.max(1,(Date.now()-roundStart)/60000);const wpm=(found.size/elapsed).toFixed(1);let html='<table class="statsTable"><tr><th>Length</th><th>Found</th><th>Available</th><th>Coverage</th></tr>';for(const k of ['3','4','5','6','7','8+']){const pct=avail[k]?Math.round(got[k]/avail[k]*100):0;html+=`<tr><td>${k}</td><td>${got[k]}</td><td>${avail[k]}</td><td>${pct}%</td></tr>`}html+='</table>';const total=solutionPaths.size?Math.round(found.size/solutionPaths.size*100):0;html+=`<div class="summaryGrid"><div class="summaryCard"><div class="label">Overall coverage</div><div class="num">${total}%</div></div><div class="summaryCard"><div class="label">Words / minute</div><div class="num">${wpm}</div></div><div class="summaryCard"><div class="label">Longest found</div><div class="num">${longest==='—'?'—':longest.toUpperCase()}</div></div><div class="summaryCard"><div class="label">5+ found</div><div class="num">${[...found].filter(w=>w.length>=5).length}</div></div></div>`;return html}
+function review(){if(!solutionPaths.size){say('Start a round first.');return}if(active){active=false;clearInterval(timer);timer=null;clearPath()}let m=solutionWords().filter(w=>w.length>=5&&!found.has(w)).sort((a,b)=>b.length-a.length||a.localeCompare(b));$('missed').innerHTML='';m.slice(0,100).forEach(w=>{let c=document.createElement('button');c.className='chip';c.type='button';c.textContent=w.toUpperCase();c.addEventListener('click',()=>animateWord(w));$('missed').appendChild(c)});if(!m.length){let c=document.createElement('span');c.className='chip good';c.textContent='No long words missed';$('missed').appendChild(c)}$('roundStats').innerHTML=buildStats();$('reviewBox').classList.remove('hidden');say(`Reviewing ${m.length} unfound 5+ letter word${m.length===1?'':'s'}. Tap one to see its path.`)}
+wrap.addEventListener('pointerdown',e=>{if(!active||demoAnimating)return;let i=tileAt(e.clientX,e.clientY);if(i===null)return;e.preventDefault();dragging=true;pid=e.pointerId;clearPath();add(i);try{wrap.setPointerCapture?.(pid)}catch(_){}});wrap.addEventListener('pointermove',e=>{if(!dragging||e.pointerId!==pid)return;e.preventDefault();let i=tileAt(e.clientX,e.clientY);if(i!==null)add(i)});function end(e){if(!dragging||e.pointerId!==pid)return;e.preventDefault();dragging=false;try{wrap.releasePointerCapture?.(pid)}catch(_){}pid=null;submit()}wrap.addEventListener('pointerup',end);wrap.addEventListener('pointercancel',()=>{dragging=false;pid=null;clearPath()});
+modeEl.addEventListener('change',()=>{if(modeEl.value==='training')limitEl.value='inf';targetUI();if(!active){infinite=limitEl.value==='inf';seconds=infinite?0:Number(limitEl.value);showTime()}});limitEl.addEventListener('change',()=>{if(!active){infinite=limitEl.value==='inf';seconds=infinite?0:Number(limitEl.value);showTime()}});start.addEventListener('click',begin);$('hint').addEventListener('click',hint);$('review').addEventListener('click',review);$('dismissExtension').addEventListener('click',()=>$('extensionPanel').classList.add('hidden'));
 showTime();loadDict();
 })();
 </script>
